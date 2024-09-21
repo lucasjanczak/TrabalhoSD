@@ -14,10 +14,10 @@ namespace Web.Controllers
         }
 
 
-        [HttpPost]
-        public String Post(msg)
-        {
+        //[HttpPost]
+        //public String Post(msg)
+        //{
 
-        }
+        //}
     }
 }
