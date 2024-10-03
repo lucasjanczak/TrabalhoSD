@@ -1,24 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Models;
 using Web.Models;
+using Web.Requests;
+using Web.Services;
 
 namespace Web.Controllers
 {
-    //[ApiController]
-    //[Route("login")]
-    //public class LoginController : Controller
-    //{
-        
-    //    public IActionResult Index()
-    //    {
-    //        return View();
-    //    }
+    [ApiController]
+    [Route("login")]
+    public class LoginController : Controller
+    {
+        private readonly PersonService _personService;
 
+        public LoginController(PersonService personService)
+        {
+            _personService = personService;
+        }
 
-    //    [HttpPost]
-    //    public String Post(msg)
-    //    {
+        [HttpPost]
+        public IActionResult Login([FromBody] PersonRequest request)
+        {
+            if (_personService.Login(request))
+            {
+                return Ok(new { message = "Login bem-sucedido." });
+            }
+            return BadRequest(new { message = "Login ou senha inválidos." });
 
-    //    }
-    //}
+        }
+    }
 }
