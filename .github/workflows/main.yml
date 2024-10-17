@@ -22,7 +22,7 @@ jobs:
         run: dotnet restore Web.csproj
 
       - name: Rodar testes
-        run: dotnet test
+        run: dotnet test Web.csproj
 
       - name: Fazer GET na URL de deploy
         run: curl -X GET http://89.116.73.154:3000/api/deploy/58e3e509692cd531285376738f092d4c62676baefec3cb94
