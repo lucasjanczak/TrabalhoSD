@@ -5,7 +5,7 @@ namespace Web.Models;
 public class AppDbContext : DbContext
 {
     public DbSet<Person> Persons { get; set; }
-    public DbSet<Address> Adresses { get; set; }
+    public DbSet<Address> Addresses { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Image> Images { get; set; }
     public DbSet<Purchase> Purchases { get; set; }

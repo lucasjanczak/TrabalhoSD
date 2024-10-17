@@ -8,6 +8,21 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
+      - name: Checkout código
+        uses: actions/checkout@v2
+
+      - name: Configurar .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '8.0'
+
+      - name: Restaurar dependências
+        run: dotnet restore
+
+      - name: Rodar testes
+        run: dotnet test
+
       - name: Fazer GET na URL de deploy
         run: curl -X GET http://89.116.73.154:3000/api/deploy/58e3e509692cd531285376738f092d4c62676baefec3cb94
