@@ -19,7 +19,7 @@ jobs:
           dotnet-version: '8.0'
 
       - name: Restaurar dependências
-        run: dotnet restore
+        run: dotnet restore Web.csproj
 
       - name: Rodar testes
         run: dotnet test
