@@ -17,5 +17,6 @@ public class AppDbContext : DbContext
         //string connectionString = "mysql://mysql:855be35b9fab607d8b93@painel.lucasjanczak.com.br:3306/cotemig";
 
         optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+        optionsBuilder.UseOpenIddict();
     }
 }
