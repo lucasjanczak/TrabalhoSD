@@ -8,7 +8,6 @@ namespace Web.Controllers
     public class HealthController : ControllerBase
     {
         [HttpGet]
-        [Authorize]
         public IActionResult Get()
         {
             return Ok(new { status = "UP" });

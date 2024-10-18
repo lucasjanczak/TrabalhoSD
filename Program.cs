@@ -47,6 +47,8 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddSingleton<AppDbContext>();
 builder.Services.AddScoped<PersonService>();
+builder.Services.AddScoped<AddressService>();
+
 
 var app = builder.Build();
 

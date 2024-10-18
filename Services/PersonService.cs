@@ -3,14 +3,9 @@ using Web.Requests;
 
 namespace Web.Services
 {
-    public class PersonService
+    public class PersonService(AppDbContext context)
     {
-        private readonly AppDbContext _context;
-
-        public PersonService(AppDbContext context)
-        {
-            _context = context;
-        }
+        private readonly AppDbContext _context = context;
 
         public bool Login(PersonRequest request)
         {
