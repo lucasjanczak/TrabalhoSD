@@ -17,6 +17,6 @@
     + preco
     + data
 
-+ GET/POST/PUT/DELETE endpoint /api/product/{id}
++ GET/POST/PUT/DELETE endpoint /api/product?{id} /api/product?{name}
   + detalhes de 1 unico produto
   + Carrousel de imagens
