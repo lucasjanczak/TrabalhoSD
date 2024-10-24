@@ -10,13 +10,13 @@
     + Estoque
     + Categoria
 
-+ endpoint /api/products
++ endpoint /api/products /api/products?name={name}
   + todos os produtos a venda
   + filters
     + categoria
     + preco
     + data
 
-+ GET/POST/PUT/DELETE endpoint /api/product?{id} /api/product?{name}
++ GET/POST/PUT/DELETE endpoint /api/product/{id}
   + detalhes de 1 unico produto
   + Carrousel de imagens
