@@ -1,0 +1,22 @@
++ endpoint /api/seller/products
+  + filters
+    + Status - Ativo/Cancelado/Agendado
+    + Data de Agendamento
+    + Paginação
+    + Titulo
+    + Descricao
+    + Valor
+    + Imagem
+    + Estoque
+    + Categoria
+
++ endpoint /api/products
+  + todos os produtos a venda
+  + filters
+    + categoria
+    + preco
+    + data
+
++ GET/POST/PUT/DELETE endpoint /api/product/{id}
+  + detalhes de 1 unico produto
+  + Carrousel de imagens
